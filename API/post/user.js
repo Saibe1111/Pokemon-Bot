@@ -5,14 +5,13 @@ module.exports.run = (app) => {
 
       const id = req.body.id
       const username = req.body.username
-      const xp = req.body.xp
 
       if (!id || !username) {
         res.send('Args missing !')
         return
       }
 
-      let sql = `INSERT INTO user (id,xp,username) VALUES (${id},${xp},'${username}')`
+      let sql = `INSERT INTO user (id,xp,username) VALUES (${id},0,'${username}')`
 
       let db = new sqlite3.Database('./database/db.db', (err) => {
         if (err) {
