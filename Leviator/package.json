@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Saibe1111/Pokemon-Bot/issues"
   },
-  "homepage": "https://github.com/Saibe1111/Pokemon-Bot#readme"
+  "homepage": "https://github.com/Saibe1111/Pokemon-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
 }
