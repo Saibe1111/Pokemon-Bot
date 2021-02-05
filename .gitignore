@@ -103,7 +103,9 @@ dist
 # TernJS port file
 .tern-port
 
-#Mackogneur
+
+.idea
 
 Mackogneur/config*
-.idea
+API/config.json
+Leviator/config.json
