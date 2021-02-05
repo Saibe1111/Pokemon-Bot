@@ -1,7 +1,6 @@
 const { Client, Collection } = require('discord.js');
 const { TOKEN } = require("./config.json");
 const { readdirSync } = require('fs');
-const close = require('./commands/misc/close.js');
 
 const client = new Client();
 client.login(TOKEN);
