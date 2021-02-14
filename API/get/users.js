@@ -7,7 +7,6 @@ module.exports.run = (app) => {
         if (err) {
           return console.error(err.message);
         }
-        console.log('Connected to the SQlite database.');
       });
 
       let sql = `SELECT * FROM user ORDER BY xp DESC`;

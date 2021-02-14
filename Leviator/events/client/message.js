@@ -1,6 +1,6 @@
 const { PREFIX } = require("../../config.json");
 
-module.exports = (client, message) => {
+module.exports = (client, message) => {    
 
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
     if(message.channel.type === "dm") return;
@@ -14,4 +14,3 @@ module.exports = (client, message) => {
 
     command.run(client, message, args);
 }
-
