@@ -1,6 +1,11 @@
 const { PREFIX } = require("../../config.json");
+const xp = require("./message/xp.js")
+const countMessage = require("./message/message.js")
 
-module.exports = (client, message) => {    
+module.exports = (client, message) => {
+
+    xp.run(message);
+    countMessage.run(message);
 
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
     if(message.channel.type === "dm") return;
