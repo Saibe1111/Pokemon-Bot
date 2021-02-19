@@ -12,6 +12,13 @@ module.exports.run = (app) => {
       let sql = `SELECT * FROM user where id=${id}`;
 
       db.get(sql, [], (err, rows) => {
+        if(err){
+          return console.error(err.message);
+        }
+        if(!rows){
+          res.status(500).send('No row !');
+        }
+
         res.json(rows);
       });
 

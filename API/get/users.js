@@ -12,6 +12,9 @@ module.exports.run = (app) => {
       let sql = `SELECT * FROM user ORDER BY xp DESC`;
 
       db.all(sql, [], (err, rows) => {
+        if(err){
+          return console.error(err.message);
+        }
         res.json(rows);
       });
 
