@@ -3,9 +3,9 @@ const express = require('express');
 const app = express();
 const { readdirSync } = require('fs');
 const server = http.createServer(app);
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 let port = 8000;

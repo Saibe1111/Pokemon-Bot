@@ -9,7 +9,7 @@ module.exports.run = (app) => {
     let addXp = req.body.addXp
     let removeXp = req.body.removeXp
     let message = req.body.message
-    console.log(`xp:${addXp}, message:${message}`)
+    //console.log(`xp:${addXp}, message:${message}`)
 
     if (!id || !username) {
       res.send('Args missing !')

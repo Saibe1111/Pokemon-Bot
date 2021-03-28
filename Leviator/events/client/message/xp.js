@@ -17,7 +17,7 @@ module.exports.run = (message) =>{
     function intervalFunc() {
       list.shift();
     }
-    setInterval(intervalFunc, 100); //60000 = 1 min entre chaque xp
+    setInterval(intervalFunc, 60000); //60000 = 1 min entre chaque xp
     list.push(message.author.id)
   }
 

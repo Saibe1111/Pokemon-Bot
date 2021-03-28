@@ -7,6 +7,11 @@ client.login(TOKEN);
 
 client.commands = new Collection();
 
+client.on('ready', () => {
+    client.user.setStatus('invisible');
+});
+
+
 const loadCommands = (dir = "./commands/") => {
     readdirSync(dir).forEach(dirs => {
         const commands = readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith('.js'));
